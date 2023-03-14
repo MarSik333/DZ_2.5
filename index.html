@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+
+            <div class="one">
+                <h1>Тачка інфо</h1>
+
+                    <p id="car-info"></p>
+
+                    <form>
+                            <label for="driver-name">Твоє ім'я:</label>
+                            <input type="text" id="driver-name" name="driver-name">
+                            <button type="button" onclick="addDriver()">Закріпити ім'я</button>
+                            <label for="driver-name-check">Я є у списку?:</label>
+                            <input type="text" id="driver-name-check" name="driver-name-check">
+                            <button type="button" onclick="checkDriver()">Перевірити</button>
+                            <label for="distance">Відстань (км):</label>
+                            <input type="number" id="distance" name="distance">
+                            <button type="button" onclick="calculate()">Розрахунок</button>
+                    </form>
+                    <p id="result1"></p>
+            </div>
+
+
+
+
+
+
+            <div class="two">
+                <h1>Зламаний годинник</h1>
+                    <div>
+                        <label for="hours">Год:</label>
+                        <input type="number" id="hours" min="0" max="23" value="0">
+                        <label for="minutes">Хвилин:</label>
+                        <input type="number" id="minutes" min="0" max="59" value="0" oninput="if(this.value > 59) this.value = 59;">                        <label for="seconds">Seconds:</label>
+                        <input type="number" id="seconds" min="0" max="59" value="0" oninput="if(this.value > 59) this.value = 59;">                        <button id="display-btn">Display Time</button>
+                    </div>
+                    
+                    <div>
+                        <label for="seconds-to-add">Додати секунди:</label>
+                        <input type="number" id="seconds-to-add" value="0">
+                        <button id="add-seconds-btn">Додати</button>
+                    </div>
+                    
+                    <div>
+                        <label for="minutes-to-add">Додати Хвилини:</label>
+                        <input type="number" id="minutes-to-add" value="0">
+                        <button id="add-minutes-btn">Додати</button>
+                    </div>
+                    <div>
+                        <label for="hours-to-add">Додати Години:</label>
+                        <input type="number" id="hours-to-add" value="0">
+                        <button id="add-hours-btn">Додати</button>
+                    </div>
+                    <div id="output"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
